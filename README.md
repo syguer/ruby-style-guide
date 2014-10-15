@@ -2885,6 +2885,23 @@
     }
     ```
 
+* <a name="hash-literals-alignment"></a>
+ハッシュリテラルを複数行で書く場合は、一番名前の長いキーにスペースを1つの長さで値を揃えることが望ましい<sup>[[link](#align-equal)]</sup>
+
+  ```Ruby
+    # 良くない例
+    hash = {
+      short: 'hoge',
+      the_longest_key: 'huga'
+    }
+
+    # 良い例
+    hash = {
+      short:           'hoge',
+      the_longest_key: 'huga'
+    }
+  ```
+
 * <a name="hash-key"></a>
   `Hash#has_key?`より`Hash#key?`を、
   `Hash#has_value?`より`Hash#value?`を用いましょう。
@@ -3243,6 +3260,19 @@
 * <a name="assignment-space"></a>
 代入記号の両側に空白を入れること。<sup>[[link](#assignment-space)]</sup>
 
+
+* <a name="align-equal"></a>
+代入式が複数続く場合は代入記号を揃えるのが好ましい<sup>[[link](#align-equal)]</sup>
+
+  ```Ruby
+  # 良くない例
+  string = "hogehogu"
+  sub_string = "hogehogu"
+
+  # 良い例
+  string     = "hogehogu"
+  sub_string = "hogehogu"
+  ```
 ## パーセントリテラル
 
 * <a name="percent-q-shorthand"></a>
@@ -3528,4 +3558,4 @@ MRI 1.9, MRI 2.0 双方をサポートし、Emacs向けのよいプラグイン�
 [RubyMine](http://www.jetbrains.com/ruby/) のコードインスペクションは、このガイドに
 [部分的に基づいています](http://confluence.jetbrains.com/display/RUBYDEV/RubyMine+Inspections)。
 
-## Be Consistent&mdash;[Google C++ Style Guide][google-c++][airbnb-javascript]: https://github.com/airbnb/javascript[bbatsov-ruby]: https://github.com/bbatsov/ruby-style-guide[github-ruby]: https://github.com/styleguide/ruby[google-c++]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml[google-c++-comments]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml#Comments[google-python-comments]: http://google-styleguide.googlecode.com/svn/trunk/pyguide.html#Comments[ruby-naming-bang]: http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist[cookpad-styleguide]: https://github.com/cookpad/styleguide/blob/master/ruby.ja.md[moneyforward-corp]: http://corp.moneyforward.com/[bojovs-com]: http://bojovs.com/2012/04/24/ruby-coding-style/[bbatsov-rails]: https://github.com/bbatsov/rails-style-guide[moneyforward-rails]: https://github.com/moneyforward/rails-style-guide
+## Be Consistent&mdash;[Google C++ Style Guide][google-c++][airbnb-javascript]: https://github.com/airbnb/javascript[bbatsov-ruby]: https://github.com/bbatsov/ruby-style-guide[github-ruby]: https://github.com/styleguide/ruby[google-c++]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml[google-c++-comments]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml#Comments[google-python-comments]: http://google-styleguide.googlecode.com/svn/trunk/pyguide.html#Comments[ruby-naming-bang]: http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist[cookpad-styleguide]: https://github.com/cookpad/styleguide/blob/master/ruby.ja.md[moneyforward-corp]: http://corp.moneyforward.com/[bojovs-com]: http://bojovs.com/2012/04/24/ruby-coding-style/[bbatsov-rails]: https://github.com/bbatsov/rails-style-guide[moneyforward-rails]: https://github.com/moneyforward/rails-style-guide
