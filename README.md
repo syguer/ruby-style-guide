@@ -409,6 +409,7 @@
   Rubyコミュニティには2つの有名なスタイル - 先頭に`.`を付けるもの (Option A)、
   末尾に`.`を付けるもの (Option B) - があり、
   どちらも良いと考えられています。
+  我々は先頭に`.`を付けるもの (Option A)を採用します。
 <sup>[[link](#consistent-multi-line-chains)]</sup>
 
   * **(Option A)** メソッドチェーンを次の行へつなげる時は、
@@ -422,19 +423,6 @@
     # 良い例 - ２行目で何が行われているかすぐに理解できます
     one.two.three
       .four
-    ```
-
-  * **(Option B)** メソッドチェーンを次の行につなげる時は、
-    式が続くことを示すように最初の行に`.`を置きましょう。
-
-    ```Ruby
-    # 悪い例 - メソッドチェーンが続いているかを知るには、次の行を読む必要があります
-    one.two.three
-      .four
-
-    # 良い例 - 最初の行を越えて式が続くか一目瞭然です
-    one.two.three.
-      four
     ```
 
   双方のスタイルのメリットに関する議論は[こちら](https://github.com/bbatsov/ruby-style-guide/pull/176)
@@ -1117,7 +1105,7 @@
 
 * <a name="method-inline-newline"></a>
 式の途中で改行する場合は、2行目以降を1行目より1段深くインデントすること。<sup>[[link](#method-inline-newline)]</sup>
-    ```ruby    # 良い例    User.active.      some_scope(foo).      other_scope(bar)    # 悪い例    User.active.    some_scope(foo).    other_scope(bar)
+    ```ruby    # 良い例    User.active      .some_scope(foo)      .other_scope(bar)    # 悪い例    User.active.    some_scope(foo).    other_scope(bar)
     ```
 
 * <a name="block-argument"></a>
